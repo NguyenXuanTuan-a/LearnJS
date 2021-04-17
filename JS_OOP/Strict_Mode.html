@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict_Mode</title>
+</head>
+<body>
+    <script>
+        // Hỗ trợ code chuẩn quy tắc
+
+        x=10;
+        console.log(x);
+
+        function tong(x,x){
+            console.log(x+x);
+        }
+        tong(1,1);
+       // ==> Nhìn đoạn code này rất khó hiểu vì bị trùng tên biến x
+
+       //==> Dùng Strict_Mode 
+       "use strict"; // sử dụng cái này thì ta phải dùng đúng quy tắc và ko được có những biến trùng nhau
+        var x=10;
+        console.log(x);
+
+        function tong(x,y){ // nếu ta vẫn để tong(x,x) chương trình sẽ báo lỗi
+            console.log(x+y);
+        }
+        tong(1,1);
+    </script>
+</body>
+</html>

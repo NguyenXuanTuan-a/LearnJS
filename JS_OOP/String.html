@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_OOP_String</title>
+</head>
+<body>
+        <script>
+            var s="Hello Tuan chao ban";
+            console.log(s)
+            var s2="Hoc di nhe ";
+            var s3= s2+s;
+            var s4= s.concat(s2);
+            console.log(s3);
+            console.log(s4.length);
+
+
+            // tim kiem trong chuoi
+            var index = s.indexOf("Hello");// Nếu có kí tự Hello trả về 0, Nếu ko có trả về -1
+            console.log(index);
+
+            // 
+            var lastIndex = s.lastIndexOf("u");
+
+            // Cắt chuỗi
+            var substr1 = s.substr(0,6);// cắt từ 1->6
+            console.log(substr1);
+
+            // convert string -> mảng
+            var arrayStr = s.split(" ");
+            for(i=0;i<arrayStr.length;i++){
+                console.log(arrayStr[i]);
+            }
+
+            // replace ( thay thế)
+            var replaceStr = s.replace("chao ban" , "kaka");
+            console.log(replaceStr);
+        </script>
+</body>
+</html>

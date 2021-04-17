@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // Tạo đối tượng , this.name là chỉ đến chính name,age,adress của personA
+        var personA ={name:"A",age:20 , adress:"Ha Noi", talk:function(){
+            return this.name+ " talk about adress " + this.adress + ". age " + this.age;
+        }};
+
+        console.log(personA.name);
+        console.log(personA.age);
+        console.log(personA.adress);
+        console.log(personA.talk());
+        var personB ={name:"B",age:22 , adress:"Yen Bai", talk:function(){
+            return this.name+ " talk about adress " + this.adress + ". age " + this.age;
+        }};
+         console.log(personB.name);
+        console.log(personB.age);
+        console.log(personB.adress);
+        console.log(personB.talk());
+
+        // Thêm 1 thuộc tính vào trong đối tượng
+        personB.hometown ="Phượng Cách";
+        personA.school="Điện lực";
+
+        // Cách 2 tạo đối tượng
+        var personC = new Object();
+        personC.name= "Duyên";
+        personC.age="21";
+        personC.talk= function(){
+            console.log(this.name + "talk");
+        }
+        personC.talk();
+
+        // Ham set , get
+        var personD ={
+            name: "D",
+            //cách set 1:
+            setName: function(v){
+                this.name=v;
+            },
+            // cách set 2
+            set setName2(v){
+                this.name=v;
+            },
+            // cách get 1
+            getName: function(){
+                return this.name;
+            },
+
+        }
+
+        console.log(personD.name);
+        personD.setName("D1");
+        console.log(personD.name);
+        
+        personD.setName2 ="D2";
+        console.log(personD.name);
+    </script>
+</body>
+</html>

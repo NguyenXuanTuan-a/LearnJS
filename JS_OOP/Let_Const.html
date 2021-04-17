@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let_Const</title>
+</head>
+<body>
+    <script>
+        const PI = 3.14 // biến pi có thể dùng được cả trong và ngoài hàm là biến global
+        function tong(x,y){
+            var tong = PI + x + y;
+            return tong;
+            // x,y là biến chỉ sử dụng trong hàm(function) là biến loacl 
+        }
+
+        const person = {name: "A",age:20};
+        console.log(person);
+
+        // let
+        function vongLap(){
+            var i=10;
+            for(let i=0;i<60;i++){ // khai báo let thì i chỉ sử dụng trong vòng mình khai báo ko ảnh hưởng đến các biến i bên ngoài 
+                console.log(i);// i chạy từ 0->60
+            }
+            console.log("-----"+i); // i này vẫn bằng 10 ko bị ảnh hưởng
+        }
+        vongLap();
+
+        let k=10; // dùng let sẽ không khai báo biến trùng tên nhau nữa
+        var k=20; // chương trình sẽ báo lỗi vì khai báo let k rồi nên k được trùng tên k dưới nữa
+    </script>
+</body>
+</html>

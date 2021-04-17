@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+<body>
+    <script>
+        var personList=[
+            {id:1,name:"d",age:20,adress:{street:"tran phu",city:"Ha Noi"}},
+            {id:2,name:"g",age:18,adress:{street:"hoang ha",city:"Ho Chi Minh"}},
+            {id:3,name:"a",age:24,adress:{street:"ho tung mau",city:"Hai Phong"}}
+        ];
+        
+        for(let i=0; i<personList.length;i++){
+            let person = personList[i];
+            console.log(person.id);
+            console.log(person.name);
+            console.log(person.age);
+             for(var k in person.adress){
+                console.log(person.adress[k]);
+            }
+        }
+        console.log("Người có tuổi lớn nhất là: ");
+        let ageMax=0;
+         for(let i=0; i<personList.length;i++){
+            let person = personList[i];
+            if(person.age > ageMax){
+                ageMax = person.age;
+            }
+        }
+        console.log(ageMax);
+
+        console.log("Người có địa chỉ ở Hà Nội là: ");
+        for(let i=0; i<personList.length;i++){
+            let person = personList[i];
+           if(person.adress.city =="Ha Noi"){
+               console.log(person.id);
+            console.log(person.name);
+            console.log(person.age);
+             for(var k in person.adress){
+                console.log(person.adress[k]);
+            }
+           }
+        }
+
+        // Sắp xếp theo abc
+        console.log("Sắp xếp tên theo bảng chữ cái abc");
+        personList.sort(function(person1 ,person2){
+            if(person1.name.toLowerCase() < person2.name.toLowerCase()){
+                return -1;
+            }
+            if(person1.name.toLowerCase() < person2.name.toLowerCase()){ // toLowCase là ko phân biệt hoa thường
+                return 1;
+            }
+            return 0; // trả về 0 nếu tên trùng nhau
+        })
+        for(let i=0; i<personList.length;i++){
+            let person = personList[i];
+            console.log(person.id);
+            console.log(person.name);
+            console.log(person.age);
+             for(var k in person.adress){
+                console.log(person.adress[k]);
+            }
+        }
+        console.log("----------Push thêm 1 phần tử--------------");
+        personList.push({id:4,name:"e",age:21,adress:{street:"yen noi",city:"Ha Noi"}})
+        for(let i=0; i<personList.length;i++){
+            let person = personList[i];
+            console.log(person.id);
+            console.log(person.name);
+            console.log(person.age);
+             for(var k in person.adress){
+                console.log(person.adress[k]);
+            }
+        }
+    </script>
+</body>
+</html>

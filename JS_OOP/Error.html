@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error-Trycacth</title>
+</head>
+<body>
+    <script>
+        function chia(x,y){
+            if(y==0){
+                throw "y =0";
+            }
+            else{
+                return x/y;
+            }
+        }
+        try{
+            var thuong = chia(10,5);
+            console.log(thuong);
+        }catch(err){
+            console.log("Loi chia cho 0 "+err)
+        }finally{
+            console.log("finally");
+        }
+        // finally là dù có xảy ra lỗi hay không thì phần mềm vẫn gọi vào finally
+    </script>
+</body>
+</html>

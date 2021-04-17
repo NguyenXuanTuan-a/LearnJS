@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Element</title>
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>Tuan Nguyen</p>
+    </div>
+
+    <!-- Dom Event -->
+    <a href="#">click me</a>
+
+    <script>
+        let divHeader = document.getElementById("header");
+        console.log(divHeader);
+
+        let aList = divHeader.getElementsByTagName("a");
+        console.log("Số lượng thẻ a trong li là: " + aList.length);
+        for(let i=0; i<aList.length;i++){
+            aList[i].href="https://www.google.com"
+        }
+    </script>
+</body>
+</html>

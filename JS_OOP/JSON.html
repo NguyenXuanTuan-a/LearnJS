@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <script>
+        var person = {id:1, name:"A" ,age:21};
+
+        // Json của js
+        let jsonStr = JSON.stringify(person);// chuoi json string
+
+        console.log(person); // Đây là 1 đối tượng Object
+        console.log(jsonStr); // String
+
+        // convert json thành đối tượng(Object)
+
+        let p = JSON.parse(jsonStr) // lúc này p là object person
+        console.log(p.id);
+        console.log(p.name);
+        console.log(p.age);
+
+        // array json
+        let arrayPerson = [
+            {id:1,name:"A"},
+            {id:2,name:"B"}
+        ];
+        let jsonPerson = JSON.stringify(arrayPerson)
+        console.log(jsonPerson);
+    </script>
+</body>
+</html>
