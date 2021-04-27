@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        function xetAge(age){
+            if(age<1){
+                console.log('Trẻ sơ sinh')
+            }else if(age==1 && age<= 3){
+                console.log('Trẻ em')
+            }else if(age>3 && age <18){
+                console.log('Em bé')
+            }else if( age>= 18 && age <40){
+                console.log('Người lớn')
+            }
+        }
+        xetAge(18);
+
+        function tingTong(){
+            var sum=0;
+            for(var i= 1;i<100 ;i++ ){
+                sum += i;
+            }
+            console.log(sum);
+        }
+
+        tingTong();
+
+        var giaiThua=1;
+        for(var i=1 ; i<4 ;i++){
+            giaiThua *= i;
+        }
+        console.log(giaiThua)
+
+        var java = parseInt("10 10 10")
+        console.log("java = " + java)
+        
+    </script>
+</body>
+</html>

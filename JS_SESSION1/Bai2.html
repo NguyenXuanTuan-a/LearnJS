@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+<body>
+    <script>
+        function giaiPt(a,b){
+           if(a ==0){
+               if(b==0){
+                   console.log('Phương trình vô số nghiệm')
+               }
+               console.log('Phương trình vô ngiệm')
+           }else{
+               return -b/a;
+           }
+        }
+        console.log(giaiPt(4,8));
+
+        function gtPtBac2(a,b,c){
+             if (a == 0) {
+                if (b == 0) {
+                    if (c == 0) {
+                        console.log('Phuong trinh vo so nghiem')
+                    }
+                    else
+                        console.log('Phuong trinh vo nghiem')
+                }
+                else {
+                    x = -c / b
+                    console.log(x)
+                }
+            }
+            else {
+                delta = b * b - 4 * a * c
+                if (delta < 0) {
+                    console.log('Phương trình vô nghiệm!!!')
+                }
+                else if (delta == 0) {
+                    x1 = -b / (2 * a)
+                    console.log('Phương trình có 1 nghiệm kép là:  ' + x1)
+                }
+                else {
+                    x2 = (-b + Math.sqrt(delta)) / (2 * a)
+                    x3 = (-b - Math.sqrt(delta)) / (2 * a)
+                    console.log('Phương trình có 2 nghiệm phân biệt là :' + x2 + '   ---------   ' + x3)
+                }
+            }
+        }
+    console.log(gtPtBac2(1,-2,1));
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Contructor</title>
+</head>
+<body>
+    <script>
+        function User(firstName,lastName,avatar){
+            this.firstName = firstName;
+            this.lastName= lastName;
+            this.avatar=avatar;
+
+            this.getName = function(){
+                return `${this.firstName} ${this.lastName}`
+            }
+        }// Đây ko phải đối tượng mà chỉ là mô tả đối tượng
+
+        var author = new User('Tuân','Nguyễn','Heloo');// Đây mới là đối tượng
+        var user = new User('Duyên','Nguyễn','Hihi');
+
+        console.log(author);
+        console.log(user);
+
+        author.title='Chia sẻ';
+        user.comment='Comment linh tinh'
+
+        console.log(author);
+        console.log(user);
+
+        console.log(author.getName());
+        console.log(user.getName());
+
+
+        //  Object Prototype
+        // Prototype dùng làm gì? - có thể thêm được thuộc tích cho Contructor bên ngoài hàm contructor đó
+        function Student(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName= lastName;
+
+            this.getName = function(){
+                return `${this.firstName} ${this.lastName}`
+            }
+        }
+        var student = new Student('Nguyễn','Tuân');
+        var student2 = new Student('Duyên','Nguyễn');
+        // Thêm 1 thuộc tính cho Contructor Student bên ngoài
+        Student.prototype.className= '9A'
+        Student.prototype.getClassName = function(){
+            return this.className;
+        }
+
+        console.log(student)
+        console.log(student.className)
+
+        console.log(student2.getClassName())
+    </script>
+</body>
+</html>
